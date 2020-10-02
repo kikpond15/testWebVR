@@ -53,22 +53,6 @@
     </script>
   </head>
   <body>
-      <!-- 画面サイズ変更追記箇所 -->>
-      <div id="mobile" class="cover"></div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script>
-          var div = document.getElementById('mobile');
-          if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
-              var mobileHeight = $(window).height();
-              var mobileWidth = $(window).width();
-              var tempData = '<center><div id="unityContainer" style="width: ' + mobileWidth + 'px; height: ' + mobileHeight + 'px; margin: auto"></div></center>'
-              div.innerHTML = tempData;
-          }
-          else {
-              div.innerHTML = '<center><div id="unityContainer" style="width: 360px; height: 640px; margin: auto"></div></center>';
-          }
-      </script>
-      <!-- 画面サイズ変更追記箇所 -->>
 
       <div id="loader">
           <div id="loading" class="loading">Loading</div>
