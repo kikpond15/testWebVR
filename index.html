@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -53,42 +53,32 @@
     </script>
   </head>
   <body>
-      <div id="mobile" class="cover"></div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script>
-          var div = document.getElementById('mobile');
-          if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
-              var mobileHeight = $(window).height();
-              var mobileWidth = $(window).width();
-              var tempData = '<center><div id="unityContainer" style="width: ' + mobileWidth + 'px; height: ' + mobileHeight + 'px; margin: auto"></div></center>'
-              div.innerHTML = tempData;
-          }
-          else {
-              div.innerHTML = '<center><div id="unityContainer" style="width: 360px; height: 640px; margin: auto"></div></center>';
-          }
-      </script>
+    <div id="loader">
+      <div id="loading" class="loading">Loading</div>
+      <div id="progress" class="progress"></div>
+    </div>
 
-      <div id="loader">
-          <div id="loading" class="loading">Loading</div>
-          <div id="progress" class="progress"></div>
+    <div id="game">
+      <div id="gameContainer"></div>
+    </div>
+
+    <div id="instruction">
+      <div id="novr" class="panel center">
+        <h3>You&rsquo;ll need a <a href="https://developer.mozilla.com/topics/mixed-reality/">WebXR-enabled browser</a> and VR headset to fully enjoy this experience.</h3>
+        <p><img src="mousedrag.png" width="70" alt="Click-and-drag your mouse"></p>
+        <p>In the meantime, <strong><em>click and drag</em></strong> to have a look around!</p>
+        <p>
+          <button class="confirm">Continue</button>
+        </p>
       </div>
-      <div id="game">
-          <div id="gameContainer"></div>
-      </div>
-      <div id="instruction">
-          <div id="novr" class="panel center">
-              <h3>You&rsquo;ll need a <a href="https://developer.mozilla.com/topics/mixed-reality/">WebXR-enabled browser</a> and VR headset to fully enjoy this experience.</h3>
-              <p><img src="mousedrag.png" width="70" alt="Click-and-drag your mouse"></p>
-              <p>In the meantime, <strong><em>click and drag</em></strong> to have a look around!</p>
-              <p>
-                  <button class="confirm">Continue</button>
-              </p>
-          </div>
-      </div>
-      <button id="enterxr" value="Enter VR"></button>
-      <div id="performance" data-enabled="false"></div>
-      <script src="vendor/gl-matrix-min.js"></script>
-      <script src="webxr.js"></script>
+    </div>
+
+    <button id="enterxr" value="Enter VR"></button>
+
+    <div id="performance" data-enabled="false"></div>
+
+    <script src="vendor/gl-matrix-min.js"></script>
+    <script src="webxr.js"></script>
   </body>
 
 </html>
